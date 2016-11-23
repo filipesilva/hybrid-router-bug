@@ -4,6 +4,7 @@ import { APP_BASE_HREF, HashLocationStrategy, LocationStrategy } from '@angular/
 
 import { FooComponent } from './foo.component';
 import { BarComponent } from './bar.component';
+import { BazComponent } from './baz.component';
 
 class Ng1Ng2UrlHandlingStrategy implements UrlHandlingStrategy {
   // process all urls
@@ -15,7 +16,8 @@ class Ng1Ng2UrlHandlingStrategy implements UrlHandlingStrategy {
 const routes: Routes = [
   { path: '', redirectTo: 'foo', pathMatch: 'full' },
   { path: 'foo', component: FooComponent },
-  { path: 'bar/:id', component: BarComponent }
+  { path: 'bar/:id', component: BarComponent },
+  { path: 'baz/:id', component: BazComponent }
 ];
 
 @NgModule({

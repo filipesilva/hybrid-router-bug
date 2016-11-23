@@ -11,6 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class BarComponent  {
   id: string;
   constructor(activatedRoute: ActivatedRoute) {
+    console.log('bar constructor called');
     console.log(`id: ${activatedRoute.snapshot.params['id']}`);
     this.id = activatedRoute.snapshot.params['id'];
   }

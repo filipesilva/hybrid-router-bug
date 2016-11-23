@@ -5,11 +5,12 @@ import { UpgradeModule } from '@angular/upgrade/static';
 import { AppComponent }  from './app.component';
 import { FooComponent } from './foo.component';
 import { BarComponent } from './bar.component';
+import { BazComponent } from './baz.component';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   imports:      [ BrowserModule, UpgradeModule, AppRoutingModule ],
-  declarations: [ AppComponent, FooComponent, BarComponent ],
+  declarations: [ AppComponent, FooComponent, BarComponent, BazComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
@@ -17,7 +18,7 @@ export class AppModule { }
 declare var angular: angular.IAngularStatic;
 
 angular
-  .module('ng1app', [ 'ngRoute', 'ng1app.bar' ])
+  .module('ng1app', [ 'ngRoute', 'ng1app.foo', 'ng1app.bar' ])
   .config(['$locationProvider',
     function config($locationProvider: angular.ILocationProvider) {
       $locationProvider.hashPrefix('!');

@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   template: `
     <a [routerLink]="['/foo']">foo</a>
     <a [routerLink]="['/bar', 1]">bar</a>
+    <a [routerLink]="['/baz', 1]">baz</a>
     <router-outlet></router-outlet>
     <div ng-view></div>
   `,
