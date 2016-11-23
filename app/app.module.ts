@@ -15,5 +15,11 @@ export class AppModule { }
 
 declare var angular: angular.IAngularStatic;
 
-angular.module('phonecatApp', [ 'ngRoute' ]);
+angular
+  .module('phonecatApp', [ 'ngRoute' ])
+  .config(['$locationProvider',
+    function config($locationProvider: angular.ILocationProvider) {
+      $locationProvider.hashPrefix('!');
+    }
+  ]);
 
